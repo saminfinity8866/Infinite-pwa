@@ -1,0 +1,11 @@
+{
+  "name": "INFINITE",
+  "short_name": "INFINITE",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#17102b",
+  "theme_color": "#17102b",
+  "description": "بیکرانِ انتخاب، بی‌نهایتِ تجربه.",
+  "lang": "fa",
+  "dir": "rtl"
+}
