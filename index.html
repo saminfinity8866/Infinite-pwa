@@ -1,36 +1,228 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-<head> 
-  <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="manifest.json">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>INFINITE</title>
-  <style> <script>
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("./service-worker.js");
-  }
-</script>
+  <meta name="theme-color" content="#17102b">
+  <meta name="description" content="INFINITE؛ بیکران انتخاب، بی‌نهایت تجربه.">
+  <link rel="manifest" href="manifest.json">
+  <title>INFINITE | بیکران انتخاب</title>
+
+  <style>
+    * { box-sizing: border-box; }
+
     body {
-      background: #17102b;
-      color: white;
-      font-family: sans-serif;
+      margin: 0;
+      background: #110b20;
+      color: #fff;
+      font-family: Tahoma, sans-serif;
+      line-height: 1.9;
+    }
+
+    header {
+      padding: 22px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ffffff18;
+    }
+
+    .logo {
+      color: #e5b96b;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      margin-right: 18px;
+      font-size: 13px;
+    }
+
+    .hero {
+      min-height: 490px;
+      padding: 100px 20px 80px;
       text-align: center;
-      padding: 60px 20px;
+      background: radial-gradient(ellipse at top, #48236c 0%, #110b20 68%);
     }
+
+    .symbol {
+      color: #e5b96b;
+      font-size: 55px;
+    }
+
     h1 {
-      color: #d78aff;
-      font-size: 42px;
+      font-size: clamp(38px, 9vw, 68px);
+      margin: 5px 0;
     }
-    p {
-      color: #e5d9f5;
-      font-size: 18px;
+
+    .slogan {
+      color: #e5b96b;
+      font-size: 20px;
+    }
+
+    .intro {
+      color: #d1c9dc;
+      max-width: 600px;
+      margin: 18px auto 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 11px 28px;
+      border-radius: 30px;
+      background: #d6a85f;
+      color: #1b102b;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 65px 7%;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 27px;
+      color: #e5b96b;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .card {
+      padding: 28px 20px;
+      border: 1px solid #ffffff20;
+      border-radius: 18px;
+      background: linear-gradient(145deg, #26183d, #191126);
+    }
+
+    .card h3 { color: #e5b96b; }
+    .card p { color: #c9c1d3; font-size: 14px; }
+
+    .story { background: #1a1129; }
+
+    .story p {
+      max-width: 680px;
+      margin: 15px auto;
+      color: #d1c9dc;
+    }
+
+    footer {
+      padding: 25px;
+      text-align: center;
+      color: #9e93ad;
+      border-top: 1px solid #ffffff18;
+      font-size: 13px;
+    }
+
+    @media(max-width:600px) {
+      header {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav a { margin: 0 8px; }
+
+      .hero {
+        min-height: 430px;
+        padding-top: 75px;
+      }
     }
   </style>
 </head>
+
 <body>
-  <h1>INFINITE ♾️</h1>
-  <p>بیکرانِ انتخاب، بی‌نهایتِ تجربه.</p>
-  <p>به دنیای بی‌نهایت خوش آمدی.</p>
+
+<header>
+  <div class="logo">INFINITE ♾️</div>
+  <nav>
+    <a href="#about">داستان ما</a>
+    <a href="#world">جهان ما</a>
+    <a href="#contact">ارتباط</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="symbol">♾</div>
+    <h1>INFINITE</h1>
+    <div class="slogan">بیکرانِ انتخاب، بی‌نهایتِ تجربه.</div>
+
+    <p class="intro">
+      به دنیایی خوش آمدی که در آن فرصت‌ها به یکدیگر متصل می‌شوند
+      و هر انتخاب می‌تواند آغاز تجربه‌ای تازه باشد.
+    </p>
+
+    <a class="button" href="#world">کشف دنیای INFINITE</a>
+  </section>
+
+  <section id="about" class="story">
+    <h2 class="section-title">داستان ما</h2>
+
+    <p>
+      ما باور داریم جهان پر از امکان‌هایی است که هنوز کشف نشده‌اند.
+      INFINITE از یک ایده شکل گرفته است:
+      ساختن ارتباطی هوشمند میان انسان‌ها، کسب‌وکارها و فرصت‌ها.
+    </p>
+
+    <p>و خداوند بی‌نهایت است...</p>
+  </section>
+
+  <section id="world">
+    <h2 class="section-title">جهان بی‌نهایت</h2>
+    <p>چهار مسیر برای تجربه فرصت‌های تازه</p>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>تجارت هوشمند</h3>
+        <p>محصولات منتخب، فناوری و تجربه خرید متفاوت.</p>
+      </div>
+
+      <div class="card">
+        <h3>گردشگری</h3>
+        <p>کشف مقصدهای تازه و تجربه سفرهای به‌یادماندنی.</p>
+      </div>
+
+      <div class="card">
+        <h3>تبادل</h3>
+        <p>ایجاد ارتباط میان عرضه‌کنندگان و متقاضیان.</p>
+      </div>
+
+      <div class="card">
+        <h3>INFINITE VENDING</h3>
+        <p>شبکه‌ای برای اتصال مکان‌ها، تأمین‌کنندگان و اپراتورها.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact" class="story">
+    <h2 class="section-title">آینده را با هم می‌سازیم</h2>
+    <p>بیکرانِ انتخاب، بی‌نهایتِ تجربه.</p>
+    <a class="button" href="mailto:info@iraninfinite.ir">ارتباط با ما</a>
+  </section>
+
+</main>
+
+<footer>
+  INFINITE ♾️ | تمامی حقوق محفوظ است.
+</footer>
+
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("./service-worker.js");
+    });
+  }
+</script>
+
 </body>
 </html>
